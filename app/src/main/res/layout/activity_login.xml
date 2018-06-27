@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+    tools:context="com.passinhotv.android.activity.StartActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="250dp"
+                android:layout_height="55dp"
+                android:background="@drawable/img_logo_top" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="20dp"
+                    android:text="Chega! Chega!"
+                    android:textAlignment="center"
+                    android:textColor="@color/color_green"
+                    android:textSize="24dp"
+                    android:textStyle="bold|italic" />
+                <TextView
+                    android:id="@+id/tx_crie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="25dp"
+                    android:text="Faça login em sua conta ou"
+                    android:textAlignment="center"
+                    android:textColor="#fff"
+                    android:textSize="18dp"
+                    android:textStyle="bold|italic" />
+                <TextView
+                    android:id="@+id/tx_login"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="crie uma nova conta."
+                    android:textColor="@color/color_blue"
+                    android:textSize="18dp"
+                    android:textStyle="bold|italic" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:src="@drawable/img_login"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_black_gray"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:paddingBottom="5dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Senha"
+                    android:textColor="@color/color_green"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+
+                <EditText
+                    android:id="@+id/edt_pwd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:focusedByDefault="false"
+                    android:hint="requeridos"
+                    android:inputType="textPassword"
+                    android:textColor="@color/color_green" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:minHeight="250dp"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_continue"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_round_border_green"
+                android:text="Deixe Passinho!"
+                android:textAllCaps="false"
+                android:textColor="@color/color_green"
+                android:textSize="22dp"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

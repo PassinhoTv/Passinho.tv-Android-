@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:background="@drawable/tab_bkg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/img_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/img_placeholder_profile" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/img_avatar"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tx_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Whip Nae Nae"
+                android:textColor="#fff"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tx_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kekel Dancy"
+                    android:textColor="#fff" />
+
+                <TextView
+                    android:id="@+id/tx_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="3 years ago"
+                    android:textColor="@color/color_white_gray"
+                    android:textStyle="italic" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/tx_favela_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:text="ƒ"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/tx_favelas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12.348,345"
+                android:textColor="@color/color_green"
+                android:textSize="20dp"
+                android:textStyle="bold|italic" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/img_blog"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/img_placeholder_profile" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_view"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/img_item_view" />
+                <TextView
+                    android:id="@+id/tx_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="6435.2k"
+                    android:textColor="#fff"/>
+                <ImageView
+                    android:id="@+id/img_like"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/img_item_like_off" />
+                <TextView
+                    android:id="@+id/tx_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="6435.2k"
+                    android:textColor="#fff"/>
+                <ImageView
+                    android:id="@+id/img_comment"
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/img_item_comment" />
+                <TextView
+                    android:id="@+id/tx_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="5dp"
+                    android:text="6435.2k"
+                    android:textColor="#fff"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <ImageView
+                    android:id="@+id/img_heart"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/img_item_heart_off"/>
+                <ImageView
+                    android:id="@+id/tx_chat"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/img_item_chat_off"/>
+                <ImageView
+                    android:id="@+id/img_upload"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="15dp"
+                    android:src="@drawable/img_item_upload"/>
+                <ImageView
+                    android:id="@+id/img_favelas"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/img_item_favela"/>
+
+            </LinearLayout>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tx_desc"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:text="Bello Horizonte, VR, RJ"
+            android:textColor="#fff"/>
+    </LinearLayout>
+
+</LinearLayout>

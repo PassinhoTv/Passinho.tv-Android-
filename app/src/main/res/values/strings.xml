@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">PassinhoTV</string>
+    <string name="string_crie">Crie uma conta gratuita abaixo ou <font color='#007aff'>resolva a\n partir de um backup</font></string>
+
+    <string name="invalid_address">Invalid address</string>
+    <string name="invalid_amount">Invalid amount</string>
+    <string name="insufficient_funds">Insufficient funds</string>
+    <string name="attachment_too_long">Attachment is too long</string>
+    <string name="insufficient_fee">Transaction fee is too low.</string>
+    <string name="send_to_same_address_warning">Can\'t send to the same address.</string>
+</resources>

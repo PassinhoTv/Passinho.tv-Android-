@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+    android:orientation="vertical"
+    tools:context="com.passinhotv.android.activity.BoxActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Voltar"
+            android:textAllCaps="false"
+            android:textSize="18dp"
+            android:background="#00000000"
+            android:textColor="@color/color_green"
+            android:layout_marginTop="10dp"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/img_logo_main" />
+        <Button
+            android:id="@+id/btn_transfer"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/img_transfer"
+            android:layout_toLeftOf="@+id/btn_chat"/>
+        <Button
+            android:id="@+id/btn_chat"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/img_chat"
+            android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A Caixa"
+        android:textStyle="bold|italic"
+        android:textAlignment="center"
+        android:textColor="@color/color_green"
+        android:textSize="30dp"
+        android:padding="10dp"/>
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center_horizontal"
+        android:checkedButton="@+id/leftBtn"
+        android:weightSum="9"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/leftBtn"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="@drawable/segment_left"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Mensagens"
+            android:textSize="7pt"
+            android:textColor="@drawable/segment_text_color" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="@drawable/segment_center"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Comentários"
+            android:textSize="7pt"
+            android:textColor="@drawable/segment_text_color" />
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:background="@drawable/segment_center"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Transações"
+            android:textSize="7pt"
+            android:textColor="@drawable/segment_text_color" />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="match_parent"
+            android:textSize="7pt"
+            android:background="@drawable/segment_right"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Todos"
+            android:textColor="@drawable/segment_text_color" />
+    </RadioGroup>
+
+</LinearLayout>

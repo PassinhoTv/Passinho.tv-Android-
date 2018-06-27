@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.passinhotv.android.activity.MainFlowActivity">
+    <RelativeLayout
+        android:id="@+id/lyt_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/color_black"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/btn_qr"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/img_qr" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/img_logo_main" />
+
+        <Button
+            android:id="@+id/btn_update"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/img_update" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/lyt_top"
+        android:orientation="vertical">
+        <include
+            android:id="@+id/view_first"
+            layout="@layout/view_first"
+            android:visibility="visible" />
+        <include
+            android:id="@+id/view_second"
+            layout="@layout/view_second"
+            android:visibility="gone" />
+        <include
+            android:id="@+id/view_search"
+            layout="@layout/view_search"
+            android:visibility="gone" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/tab_bkg"
+        android:weightSum="5"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/btn_first"
+            android:padding="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/tab_first_off"
+            android:background="@null"
+            android:scaleType="fitCenter">
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/btn_second"
+            android:padding="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/tab_second_off"
+            android:background="@null"
+            android:scaleType="fitCenter">
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/btn_third"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/tab_third"
+            android:background="@null"
+            android:scaleType="fitCenter">
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/btn_fourth"
+            android:padding="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/tab_fourth_off"
+            android:background="@null"
+            android:scaleType="fitCenter">
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/btn_fifth"
+            android:padding="10dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/tab_fifth_on"
+            android:scaleType="fitCenter">
+        </ImageButton>
+    </LinearLayout>
+</RelativeLayout>

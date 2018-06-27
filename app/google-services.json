@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "362372634902",
+    "firebase_url": "https://passinhotv.firebaseio.com",
+    "project_id": "passinhotv",
+    "storage_bucket": "passinhotv.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362372634902:android:40320056ff04fe25",
+        "android_client_info": {
+          "package_name": "com.passinhotv.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "362372634902-gji3ps5352kipi1rmcsboj3pn3f2i9kj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.passinhotv.android",
+            "certificate_hash": "c29d2ca03836c01408b837f74d93d6e66fa2a293"
+          }
+        },
+        {
+          "client_id": "362372634902-t285b102hmhc729p8s7hdkl86vkp1n65.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8F5Pg_HBTaz2f3PeXpkfGy2VftrRVsPI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "362372634902-t285b102hmhc729p8s7hdkl86vkp1n65.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.passinhotv.android.ui.auth.Welcome_1_Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:background="@drawable/img_logo_top" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold|italic"
+            android:text="Chega! Chega!"
+            android:textAlignment="center"
+            android:textColor="@color/color_green"
+            android:textSize="24dp" />
+
+        <TextView
+            android:id="@+id/tx_crie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="18dp"
+            android:textStyle="bold|italic"
+            android:text="Faça login em sua conta ou"/>
+        <TextView
+            android:id="@+id/tx_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="crie uma nova conta."
+            android:gravity="center"
+            android:textStyle="bold|italic"
+            android:textSize="18dp"
+            android:textColor="@color/color_blue" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:textAlignment="center"
+                android:textStyle="bold|italic"
+                android:text="Digite sua Frase de backup"
+                android:textColor="#fff"
+                android:textSize="18dp" />
+            <com.passinhotv.android.ui.auth.EditComponent.EditSpacebar
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:id="@+id/edit_tag_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:minHeight="150dp"
+                android:textStyle="bold|italic"
+                android:background="@drawable/edt_round_border_gray"
+                app:input_layout="@layout/word_imput"
+                app:tag_layout="@layout/word_tag"
+                app:delete_mode_bg="@drawable/bkg_word_del"/>
+
+            <EditText
+                android:id="@+id/edt_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:editable="false"
+                android:textAlignment="center"
+                android:background="@drawable/edt_round_border_gray"
+                android:padding="10dp"
+                android:textStyle="bold|italic"
+                android:textSize="15dp"
+                android:hint="Endereço"
+                android:focusedByDefault="false"
+                android:textColor="#fff" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_continue"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_round_border_green"
+            android:text="Continuar"
+            android:textStyle="bold|italic"
+            android:textSize="22dp"
+            android:textAllCaps="false"
+            android:textColor="@color/color_green"/>
+    </LinearLayout>
+</ScrollView>

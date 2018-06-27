@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingLeft="15dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:gravity="center_vertical"
+    android:weightSum="11">
+    <TextView
+        android:id="@+id/tx_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:text="Whip Nae Nae"/>
+    <TextView
+        android:id="@+id/tx_rank"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:textColor="@color/color_green"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:text="#1"/>
+    <ImageView
+        android:id="@+id/img_rank"
+        android:layout_width="0dp"
+        android:layout_height="25dp"
+        android:layout_weight="3"
+        android:src="@drawable/img_class"/>
+</LinearLayout>

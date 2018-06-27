@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_black"
+    tools:context="com.passinhotv.android.activity.StartActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="7">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:minHeight="250dp"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:src="@drawable/img_logo" />
+
+        <ss.com.bannerslider.views.BannerSlider
+            android:id="@+id/desc_slider"
+            android:layout_width="wrap_content"
+            android:minHeight="150dp"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            app:defaultBanner="1"
+            app:indicatorSize="1dp"
+            app:interval="8000"
+            app:loopSlides="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:minHeight="250dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_round_border_green"
+                android:textSize="18dp"
+                android:text="Iniciar!"
+                android:textStyle="bold|italic"
+                android:textAllCaps="false"
+                android:textColor="@color/color_green" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="1dp"
+                    android:background="#fff"></LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Ou"
+                    android:textStyle="italic|bold"
+                    android:textColor="@color/color_green"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="1dp"
+                    android:background="#fff"></LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold|italic"
+                    android:text="Fazer login"
+                    android:textColor="@color/color_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold|italic"
+                    android:text="para suaconta"
+                    android:textColor="#fff" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

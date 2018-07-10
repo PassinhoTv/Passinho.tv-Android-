@@ -66,7 +66,6 @@ public class MainFlowActivity extends AppCompatActivity implements View.OnClickL
         v_second = findViewById(R.id.view_second);
         v_search = findViewById(R.id.view_search);
         img_second_profile = v_second.findViewById(R.id.img_profile);
-        Picasso.get().load(R.drawable.img_placeholder_profile).transform(new CircleTransform()).into(img_second_profile);
         nBtnIndex = 1;
         btn_first.setImageResource(R.drawable.tab_first_on);
 

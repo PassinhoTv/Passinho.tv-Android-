@@ -60,13 +60,18 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/img_placeholder_profile" />
 
-                <ImageView
+
+                <com.pkmmte.view.CircularImageView
                     android:id="@+id/img_avatar"
                     android:layout_width="60dp"
                     android:layout_height="60dp"
                     android:layout_centerHorizontal="true"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/img_placeholder_profile" />
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_placeholder_profile"
+                    app:border="true"
+                    app:border_color="@color/color_blue"
+                    app:border_width="1dp" />
 
                 <Button
                     android:onClick="changeAvatar"

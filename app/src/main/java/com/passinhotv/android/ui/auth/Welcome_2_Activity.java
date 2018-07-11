@@ -1,6 +1,7 @@
 package com.passinhotv.android.ui.auth;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Html;
@@ -43,7 +44,9 @@ public class Welcome_2_Activity extends AppCompatActivity {
                 startActivity(intent);
                 setResult(999);
                 Welcome_2_Activity.this.finish();
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ECLAIR) {
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                }
             }
         });
         btn_continue.setOnClickListener(new View.OnClickListener() {

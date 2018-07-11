@@ -1,6 +1,7 @@
 package com.passinhotv.android.ui.auth;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -46,7 +47,9 @@ public class Getting_4_Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Getting_4_Activity.this, Welcome_1_Activity.class);
                 startActivity(intent);
-                overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ECLAIR) {
+                    overridePendingTransition(R.anim.fade_in,R.anim.fade_out);
+                }
                 setResult(1000);
                 Getting_4_Activity.this.finish();
             }

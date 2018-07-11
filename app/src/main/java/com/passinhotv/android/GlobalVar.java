@@ -34,12 +34,22 @@ public class GlobalVar {
     public static String strAddressEncrypted;
     public static String strPrivate;
     public static String strPublic;
+    public static String strNameProfile;
+    public static String strEmailProfile;
+    public static String strAddressProfile;
+    public static String strPhoneProfile;
 
     public static WavesWallet mWallet;
     public static final String KEY_INTENT_PASSWORD = "intent_password";
     public static final String KEY_INTENT_ADDRESS = "intent_address";
     public static final String KEY_INTENT_PRIVATE = "intent_private";
     public static final String KEY_INTENT_PUBLIC = "intent_public";
+
+    public static final String KEY_INTENT_PROFILE_NAME = "profile_name";
+    public static final String KEY_INTENT_PROFILE_EMAIL = "profile_email";
+    public static final String KEY_INTENT_PROFILE_ADDRESS = "profile_address";
+    public static final String KEY_INTENT_PROFILE_PHONE = "profile_phone";
+
     public static final String KEY_INTENT_LOCAL = "0123456789ABCDEF";
     public static final String BASE_URL = "http://207.148.29.110:9069";
     public static final String assetID = "9aJNRabwrAhGQnUQ5dVg8B6JNZ65j2US936dm9wr91ZZ";

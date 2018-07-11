@@ -3,6 +3,7 @@ package com.passinhotv.android.ui.auth;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Build;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -85,50 +86,6 @@ public class Welcome_Activity extends AppCompatActivity implements View.OnClickL
 
     }
 
-    public void saveDataToLoacal(){
-        SharedPreferences myPreferences= PreferenceManager.getDefaultSharedPreferences(Welcome_Activity.this);
-        SharedPreferences.Editor myEditor = myPreferences.edit();
-        String strPwd = GlobalVar.strPwd;
-        String strPrivate = GlobalVar.mWallet.getPrivateKeyStr();
-        String strAddress = GlobalVar.mWallet.getAddress();
-        String strPublic = GlobalVar.mWallet.getPublicKeyStr();
-        GlobalVar.strAddress = strAddress;
-        GlobalVar.strPrivate = strPrivate;
-        GlobalVar.strPublic = strPublic;
-        try {
-            strPwd= GlobalVar.encryptMsg(GlobalVar.strPwd);
-            strPrivate= GlobalVar.encryptMsg(GlobalVar.mWallet.getPrivateKeyStr());
-            strAddress = GlobalVar.encryptMsg(GlobalVar.mWallet.getAddress());
-            strPublic = GlobalVar.encryptMsg(GlobalVar.mWallet.getPublicKeyStr());
-            GlobalVar.strAddressEncrypted = GlobalVar.encryptMsg(GlobalVar.strAddress);
-
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-        } catch (NoSuchPaddingException e) {
-            e.printStackTrace();
-        } catch (InvalidKeyException e) {
-            e.printStackTrace();
-        } catch (InvalidParameterSpecException e) {
-            e.printStackTrace();
-        } catch (IllegalBlockSizeException e) {
-            e.printStackTrace();
-        } catch (BadPaddingException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
-        myEditor.putString(GlobalVar.KEY_INTENT_PASSWORD, strPwd);
-        myEditor.putString(GlobalVar.KEY_INTENT_PRIVATE, strPrivate);
-        myEditor.putString(GlobalVar.KEY_INTENT_PUBLIC, strPublic);
-        myEditor.putString(GlobalVar.KEY_INTENT_ADDRESS, strAddress);
-        myEditor.commit();
-        dialog.dismiss();
-        Intent intent = new Intent(Welcome_Activity.this, MainFlowActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(intent);
-        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-        Welcome_Activity.this.finish();
-    }
     @Override
     public void onClick(View view) {
         switch (view.getId()){
@@ -180,5 +137,57 @@ public class Welcome_Activity extends AppCompatActivity implements View.OnClickL
         myRef = GlobalVar.mDatabaseRef.child("addresslist").child(GlobalVar.mWallet.getAddress());
         myRef.setValue(GlobalVar.mWallet.getPublicKeyStr());
         saveDataToLoacal();
+    }
+
+    public void saveDataToLoacal(){
+        SharedPreferences myPreferences= PreferenceManager.getDefaultSharedPreferences(Welcome_Activity.this);
+        SharedPreferences.Editor myEditor = myPreferences.edit();
+        String strPwd = GlobalVar.strPwd;
+        String strPrivate = GlobalVar.mWallet.getPrivateKeyStr();
+        String strAddress = GlobalVar.mWallet.getAddress();
+        String strPublic = GlobalVar.mWallet.getPublicKeyStr();
+        GlobalVar.strAddress = strAddress;
+        GlobalVar.strPrivate = strPrivate;
+        GlobalVar.strPublic = strPublic;
+        try {
+            strPwd= GlobalVar.encryptMsg(GlobalVar.strPwd);
+            strPrivate= GlobalVar.encryptMsg(GlobalVar.mWallet.getPrivateKeyStr());
+            strAddress = GlobalVar.encryptMsg(GlobalVar.mWallet.getAddress());
+            strPublic = GlobalVar.encryptMsg(GlobalVar.mWallet.getPublicKeyStr());
+            GlobalVar.strAddressEncrypted = GlobalVar.encryptMsg(GlobalVar.strAddress);
+
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (NoSuchPaddingException e) {
+            e.printStackTrace();
+        } catch (InvalidKeyException e) {
+            e.printStackTrace();
+        } catch (InvalidParameterSpecException e) {
+            e.printStackTrace();
+        } catch (IllegalBlockSizeException e) {
+            e.printStackTrace();
+        } catch (BadPaddingException e) {
+            e.printStackTrace();
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        myEditor.putString(GlobalVar.KEY_INTENT_PASSWORD, strPwd);
+        myEditor.putString(GlobalVar.KEY_INTENT_PRIVATE, strPrivate);
+        myEditor.putString(GlobalVar.KEY_INTENT_PUBLIC, strPublic);
+        myEditor.putString(GlobalVar.KEY_INTENT_ADDRESS, strAddress);
+        //Profile Settings
+        myEditor.putString(GlobalVar.KEY_INTENT_PROFILE_NAME, "");
+        myEditor.putString(GlobalVar.KEY_INTENT_PROFILE_ADDRESS, "");
+        myEditor.putString(GlobalVar.KEY_INTENT_PROFILE_EMAIL, "");
+        myEditor.putString(GlobalVar.KEY_INTENT_PROFILE_PHONE, "");
+        myEditor.commit();
+        dialog.dismiss();
+        Intent intent = new Intent(Welcome_Activity.this, MainFlowActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ECLAIR) {
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+        }
+        Welcome_Activity.this.finish();
     }
 }

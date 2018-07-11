@@ -38,7 +38,10 @@ public class Getting_2_Activity extends AppCompatActivity {
         });
         et_words.setEditable(false);
         et_words.setTagList(GlobalVar.mSeeds);
-        WavesWallet newWallet = new WavesWallet(GlobalVar.strSeeds.getBytes(Charsets.UTF_8));
+        WavesWallet newWallet = null;
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.GINGERBREAD) {
+            newWallet = new WavesWallet(GlobalVar.strSeeds.getBytes(Charsets.UTF_8));
+        }
         GlobalVar.mWallet = newWallet;
     }
 

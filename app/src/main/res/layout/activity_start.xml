@@ -21,16 +21,17 @@
             android:layout_weight="3"
             android:src="@drawable/img_logo" />
 
-        <ss.com.bannerslider.views.BannerSlider
+        <ss.com.bannerslider.Slider
             android:id="@+id/desc_slider"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:minHeight="150dp"
             android:layout_height="0dp"
             android:layout_weight="2"
-            app:defaultBanner="1"
-            app:indicatorSize="1dp"
-            app:interval="8000"
-            app:loopSlides="true" />
+            app:slider_animateIndicators="true"
+            app:slider_indicatorSize="3dp"
+            app:slider_interval="8000"
+            app:slider_loopSlides="true"
+            />
 
         <LinearLayout
             android:layout_width="match_parent"

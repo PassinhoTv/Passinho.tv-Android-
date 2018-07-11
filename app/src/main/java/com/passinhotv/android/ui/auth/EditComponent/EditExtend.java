@@ -3,6 +3,7 @@ package com.passinhotv.android.ui.auth.EditComponent;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
@@ -81,7 +82,9 @@ public class EditExtend extends FrameLayout implements View.OnClickListener, Tex
     }
 
     private void setupListener() {
-        this.editText.setOnEditorActionListener(this);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.CUPCAKE) {
+            this.editText.setOnEditorActionListener(this);
+        }
         this.editText.setOnKeyListener(this);
     }
 

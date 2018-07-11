@@ -1,6 +1,7 @@
 package com.passinhotv.android.ui.auth;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -84,7 +85,9 @@ public class Welcome_1_Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Welcome_1_Activity.this, Getting_1_Activity.class);
                 startActivity(intent);
-                overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ECLAIR) {
+                    overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+                }
                 Welcome_1_Activity.this.finish();
             }
         });
@@ -118,7 +121,9 @@ public class Welcome_1_Activity extends AppCompatActivity {
     }
 
     public void getAddress() {
-        newWallet = new WavesWallet(strSeeds.getBytes(Charsets.UTF_8));
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.GINGERBREAD) {
+            newWallet = new WavesWallet(strSeeds.getBytes(Charsets.UTF_8));
+        }
         edt_address.setText(newWallet.getAddress());
     }
 }

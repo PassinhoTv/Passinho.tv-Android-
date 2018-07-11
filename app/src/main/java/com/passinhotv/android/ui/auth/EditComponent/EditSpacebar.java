@@ -4,6 +4,7 @@ package com.passinhotv.android.ui.auth.EditComponent;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -83,7 +84,9 @@ public class EditSpacebar extends FrameLayout implements OnClickListener, OnEdit
     }
 
     private void setupListener() {
-        this.editText.setOnEditorActionListener(this);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.CUPCAKE) {
+            this.editText.setOnEditorActionListener(this);
+        }
         this.editText.setOnKeyListener(this);
     }
 

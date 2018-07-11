@@ -44,7 +44,7 @@ public class MainFlowActivity extends AppCompatActivity implements View.OnClickL
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main_flow);
         initUI();
-//        initQRCode();
+        initQRCode();
     }
 
     public void initUI() {
